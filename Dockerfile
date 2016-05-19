@@ -17,6 +17,7 @@ RUN cd /tmp && \
   cp -f redis.conf /etc/redis && \
   rm -rf /tmp/redis*
   
+VOLUME ["/var/run/redis"]
 
 EXPOSE 6379
 
