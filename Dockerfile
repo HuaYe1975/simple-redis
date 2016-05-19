@@ -14,9 +14,10 @@ RUN cd /tmp && \
   make && \
   make install && \
   mkdir -p /etc/redis /data/redis && \
-  cp -f redis.conf /etc/redis && \
   rm -rf /tmp/redis*
   
+ADD redis.conf /etc/redis/
+
 VOLUME ["/var/run/redis"]
 
 EXPOSE 6379
